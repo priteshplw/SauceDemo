@@ -1,8 +1,10 @@
 package javaPractice;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class MostNumberWordsInFile {
     public static void main(String[] args) throws IOException {
@@ -13,6 +15,9 @@ public class MostNumberWordsInFile {
 //        System.out.println(newFile.getAbsolutePath());
         BufferedReader bufferedReader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "/src/test/resources/test.txt"));
         String str = bufferedReader.readLine();
+        //Other Way of capturing data from the file
+//        Scanner scanner=new Scanner(new FileReader(System.getProperty("user.dir") + "/src/test/resources/test.txt"));
+//        String str=scanner.nextLine();
         String[] splitStr = str.split(" ");
         int count = 0;
         String maxWord = "";
