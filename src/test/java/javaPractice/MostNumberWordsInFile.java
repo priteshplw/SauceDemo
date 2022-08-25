@@ -1,18 +1,31 @@
 package javaPractice;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Scanner;
 
 public class MostNumberWordsInFile {
-    public static void main(String[] args) throws IOException {
-//        Scanner scanner=new Scanner(System.in);
-//        String fileName=scanner.next();
-//
-//        File newFile=new File(System.getProperty("user.dir")+"/src/test/resources/"+fileName+".txt");
-//        System.out.println(newFile.getAbsolutePath());
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(System.getProperty("user.dir") + "/src/test/resources/test.txt"));
+    public static void main(String[] args) throws IOException, InterruptedException {
+        Scanner scanner=new Scanner(System.in);
+        String fileName=scanner.next();
+        //String path=System.getProperty("uer.dir")+"/src/test/resources/"+fileName+".txt";
+
+        File newFile=new File(fileName);
+        System.out.println(newFile.getAbsolutePath());
+        FileWriter writer=new FileWriter(newFile);
+        writer.write("this the test file which is file will be used in identifying word have is large count in this file");
+        writer.flush();
+        writer.close();
+
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(newFile));
         String str = bufferedReader.readLine();
+//        Other Way of capturing data from the file
+//        Scanner scanner2=new Scanner(new FileReader(System.getProperty("user.dir") + "/src/test/resources/test.txt"));
+//        String str2= scanner2.next();
+//        System.out.println("str2 = " + str2);
+
+
         String[] splitStr = str.split(" ");
         int count = 0;
         String maxWord = "";
@@ -35,5 +48,9 @@ public class MostNumberWordsInFile {
         else
             System.out.println(maxWord);
 
+        if (newFile.delete())
+            System.out.println("File deleted successfully");
+        else
+            System.out.println("File not deleted");
     }
 }
