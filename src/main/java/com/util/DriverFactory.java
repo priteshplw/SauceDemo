@@ -1,11 +1,13 @@
 package com.util;
 
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
-public class DriverFactory {
+public class DriverFactory extends RemoteWebDriver {
     public WebDriver driver;
     public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 

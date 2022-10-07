@@ -13,6 +13,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 //import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
+import org.testng.annotations.Test;
 
 import java.io.FileNotFoundException;
 
@@ -39,7 +40,10 @@ public class UserValidation {
         response = given().spec(requestSpecification).get("/api/users");
         jsonPath=APIUtil.setJsonPath(response.getBody().asString());
     }
-
+@Test
+public void test(){
+    System.out.println("test");
+}
     @When("API returns {string} response")
     public void listUserAPIReturnsResponse(String responseCode) {
         Assert.assertEquals(Integer.parseInt(responseCode), response.getStatusCode());

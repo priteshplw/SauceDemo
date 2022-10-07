@@ -2,6 +2,13 @@ package javaPractice;
 
 public class stringPractice {
     public static void main(String[] args) {
+//Notes:
+//1. to split with . (dot) char in java we need to use [] brasses like slit("[.]")
+//2. Concat 2 string with str1+str2 operator or str1.concat(str2) method
+//3. To check if string starts with work or letter use startsWith("") method
+//4. To print given array use .toString() method (if you use only variable then it prints memory address
+//5. To sort given array use Arrays.sort(array_name) method
+
         String s="My name is Pritesh.";
 //        char[] chars = new char[10];
 //        System.out.println("chars = " + chars.length);
@@ -33,5 +40,10 @@ public class stringPractice {
             System.out.print(" ");
         }
         System.out.print(".");
+
+        //insert a word in the middle of the another string.
+        String main_string = "Python 3.0";
+        String word = "Tutorial";
+        System.out.println(main_string.substring(0, 7) + word + main_string.substring(6));
     }
 }

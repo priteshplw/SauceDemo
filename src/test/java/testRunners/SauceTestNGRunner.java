@@ -4,8 +4,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = "src/test/resources/features",
-        glue = {"stepDefinations","hooks"},plugin = "json:target/jsonReports/CucumberReport.json",
-       // tags = "@test",
+        glue = {"stepDefinations","hooks"},plugin = {"json:target/jsonReports/CucumberReport.json"},
+        tags = "@UITest",
         publish=true
 )
 public class SauceTestNGRunner extends AbstractTestNGCucumberTests {
