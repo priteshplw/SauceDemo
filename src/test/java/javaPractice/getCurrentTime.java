@@ -10,9 +10,9 @@ public class getCurrentTime {
         System.out.format("\nCurrent Date time: %tc%n\n", System.currentTimeMillis());
 
         //Date in specific format
-        SimpleDateFormat cdt = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss.SSS");
-        cdt.setCalendar(Calendar.getInstance(TimeZone.getTimeZone("GMT")));
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss.SSS");
+        sdf.setCalendar(Calendar.getInstance(TimeZone.getTimeZone("GMT")));
 
-        System.out.println("\nNow: "+cdt.format(System.currentTimeMillis()));
+        System.out.println("\nNow: "+sdf.format(System.currentTimeMillis()));
     }
 }

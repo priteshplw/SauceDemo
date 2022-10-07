@@ -37,4 +37,4 @@ Feature: Swag Labs Inventory page validation
 #      | Product Title | Price | Description |
 #      | Product1   | 123   | Description |
 #      | Product2   | 133   | Description2 |
-
+#

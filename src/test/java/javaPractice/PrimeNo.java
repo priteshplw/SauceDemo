@@ -13,7 +13,7 @@ public class PrimeNo {
             if (checkPrime(num)) {
                 System.out.println("yes " + num + " is prime number");
             } else {
-                System.out.println("No " + num + " is prime number");
+                System.out.println("No " + num + " is not prime number");
             }
             System.out.println("Do you want to checK another number y/n");
             flag=scanner2.nextLine();
@@ -25,9 +25,11 @@ public class PrimeNo {
         if (no == 0 || no == 1) {
             flag=false;
         }else {
-            for (int i = 2; i <= no / 2; i++) {
+            for (int i = 2; i < no; i++) {
                 if (no % i == 0) {
                     flag=false;
+//                    System.out.println("No is divisible by = " + i);
+                    break;
                 }
             }
         }

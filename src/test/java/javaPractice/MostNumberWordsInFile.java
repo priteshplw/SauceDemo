@@ -9,9 +9,9 @@ public class MostNumberWordsInFile {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner scanner=new Scanner(System.in);
         String fileName=scanner.next();
-        //String path=System.getProperty("uer.dir")+"/src/test/resources/"+fileName+".txt";
+        String path=System.getProperty("user.dir")+"/src/test/resources/"+fileName+".txt";
 
-        File newFile=new File(fileName);
+        File newFile=new File(path);
         System.out.println(newFile.getAbsolutePath());
         FileWriter writer=new FileWriter(newFile);
         writer.write("this the test file which is file will be used in identifying word have is large count in this file");

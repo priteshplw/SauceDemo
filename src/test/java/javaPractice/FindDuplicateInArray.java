@@ -1,6 +1,7 @@
 package javaPractice;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 public class FindDuplicateInArray {
@@ -8,7 +9,7 @@ public class FindDuplicateInArray {
 
         int[] array = {2, 3, 5, 6, 7, 8, 5, 3, 5, 7, 4, 3, 6, 6, 0, 63, 1, 3, 4, 8, 9, 9};
         HashMap<Integer, Integer> duplicateList = new HashMap<>();
-
+        System.out.println("Existing array ->"+ Arrays.toString(array));
         for (int k : array) {
             int tmp = 0;
             if (!duplicateList.containsKey(k)) {
