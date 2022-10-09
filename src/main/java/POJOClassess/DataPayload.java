@@ -1,6 +1,10 @@
 package POJOClassess;
 
 import javax.swing.plaf.PanelUI;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class DataPayload {
     public String crudUserPayload(String uname,String job){
@@ -33,7 +37,7 @@ public class DataPayload {
                 "}";
     }
 
-
-
-
+public String readPayloadFromFile(File file) throws IOException {
+        return new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())));
+}
 }

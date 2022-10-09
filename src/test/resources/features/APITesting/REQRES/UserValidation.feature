@@ -7,7 +7,7 @@ Feature: Create, update, read and delete single user details and List of user de
 
   Scenario: Validate per page user count for API
     Given Trigger ListUser API request
-    When API returns "400" response
+    When API returns "200" response
     Then Check whether per page user count is same as mentioned in the response
 
   Scenario: Validate if total user count returned is valid for API
