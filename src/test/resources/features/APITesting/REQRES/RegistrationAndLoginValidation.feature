@@ -1,3 +1,3 @@
 @APITEST
-Feature: REQRES User Registration and Login validation
+Feature: REQ-RES User Registration and Login validation
 

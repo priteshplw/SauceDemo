@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-<!--    <listeners>-->
-<!--        <listener class-name="testListeners.ApiListener"/>-->
-<!--    </listeners>-->
-<!--    <listeners>-->
-<!--        <listener class-name="com.aventstack.extentreports.testng.listener.ExtentITestListenerClassAdapter"/>-->
-<!--    </listeners>-->
     <test verbose="2" preserve-order="true" name="SauceDemo">
         <classes>
+            <class name="testRunners.SauceTestNGRunner"/>
             <class name="testRunners.APITestNGRunner"/>
-            <class name="stepDefinations.api.reqres.UserValidation"/>
         </classes>
     </test>
 </suite>

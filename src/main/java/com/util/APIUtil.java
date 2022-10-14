@@ -3,6 +3,7 @@ package com.util;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
+import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -28,7 +29,8 @@ public class APIUtil {
 
 
         return new RequestSpecBuilder().setBaseUri("https://reqres.in/")
-                .addFilter(RequestLoggingFilter.logRequestTo(new PrintStream(file.getAbsolutePath())))
+                .addFilter(RequestLoggingFilter.logRequestTo(new PrintStream(file)))
+                .addFilter(ResponseLoggingFilter.logResponseTo(new PrintStream(file).append("-----------")))
                 .build();
     }
     public static ResponseSpecification responseBuilderWithStatus(int statusCode) {
