@@ -5,7 +5,7 @@ public class stringPractice {
 //Notes:
 //1. to split with . (dot) char in java we need to use [] brasses like slit("[.]")
 //2. Concat 2 string with str1+str2 operator or str1.concat(str2) method
-//3. To check if string starts with work or letter use startsWith("") method
+//3. To check if string starts with word or letter use startsWith("") method
 //4. To print given array use .toString() method (if you use only variable then it prints memory address
 //5. To sort given array use Arrays.sort(array_name) method
 
